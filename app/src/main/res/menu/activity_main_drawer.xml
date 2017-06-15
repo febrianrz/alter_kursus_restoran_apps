@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_beranda"
+            android:icon="@mipmap/ic_home"
+            android:title="Beranda" />
+        <item
+            android:id="@+id/nav_makanan"
+            android:icon="@mipmap/ic_makanan"
+            android:title="Makanan" />
+        <item
+            android:id="@+id/nav_minuman"
+            android:icon="@mipmap/ic_minuman"
+            android:title="Minuman" />
+        <item
+            android:id="@+id/nav_pesanan"
+            android:icon="@mipmap/ic_idea"
+            android:title="Pesanan"
+            android:visible="true" />
+    </group>
+
+    <item android:title="Pengaturan">
+        <menu>
+            <item
+                android:id="@+id/nav_server"
+                android:icon="@mipmap/ic_server"
+                android:title="Server URL" />
+        </menu>
+    </item>
+
+</menu>
