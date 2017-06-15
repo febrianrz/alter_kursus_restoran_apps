@@ -9,8 +9,13 @@ public class ServerActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_server);
-        //getSupportActionBar().setHomeButtonEnabled(true);
+        /** setting menu title di action bar **/
+        getSupportActionBar().setTitle("Pengaturan");
 
-         // 085779289341
+        /** menampilkan back button di action barnya,
+         * jangan lupa cek manifestnya juga
+         * tambahkan meta-data untuk halaman yang dituju setelah back button
+         **/
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 }
