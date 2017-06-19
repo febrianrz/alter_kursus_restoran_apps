@@ -45,12 +45,12 @@ public class MainActivity extends AppCompatActivity
         //
         navigationView.setItemIconTintList(null);
 
-        MakananFragment makananFragment = new MakananFragment();
+        BerandaFragment berandaFragment = new BerandaFragment();
         android.support.v4.app.FragmentTransaction fragmentTransaction =
                 getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.replace(R.id.content, makananFragment);
+        fragmentTransaction.replace(R.id.content, berandaFragment);
         fragmentTransaction.commit();
-        getSupportActionBar().setTitle("Menu Makanan");
+        getSupportActionBar().setTitle("Beranda");
     }
 
     @Override
@@ -92,6 +92,12 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_beranda) {
+            BerandaFragment berandaFragment = new BerandaFragment();
+            android.support.v4.app.FragmentTransaction fragmentTransaction =
+                    getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.content, berandaFragment);
+            fragmentTransaction.commit();
+            getSupportActionBar().setTitle("Beranda");
             Toast.makeText(getApplicationContext(),"Fragment",Toast.LENGTH_LONG);
         } else if (id == R.id.nav_makanan) {
             MakananFragment makananFragment = new MakananFragment();
@@ -110,6 +116,12 @@ public class MainActivity extends AppCompatActivity
             getSupportActionBar().setTitle("Menu Minuman");
             Toast.makeText(getApplicationContext(),"Fragment Minuman",Toast.LENGTH_LONG).show();
         } else if (id == R.id.nav_pesanan) {
+            PesananFragment pesananFragment = new PesananFragment();
+            android.support.v4.app.FragmentTransaction fragmentTransaction =
+                    getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.content, pesananFragment);
+            fragmentTransaction.commit();
+            getSupportActionBar().setTitle("Pesanan");
             Toast.makeText(getApplicationContext(),"Fragment Pesanan",Toast.LENGTH_LONG).show();
         } else if (id == R.id.nav_server) {
             Intent intent = new Intent(this, ServerActivity.class);
