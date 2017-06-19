@@ -23,6 +23,7 @@ public class MakananFragment extends Fragment {
     private RecyclerView.Adapter recylerAdapter;
     private RecyclerView.LayoutManager recylerLayoutManager;
     private ArrayList<String> dataSet;
+
     public MakananFragment() {
         // Required empty public constructor
     }

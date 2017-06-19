@@ -102,6 +102,12 @@ public class MainActivity extends AppCompatActivity
             getSupportActionBar().setTitle("Menu Makanan");
             Toast.makeText(getApplicationContext(),"Fragment Makanan",Toast.LENGTH_LONG).show();
         } else if (id == R.id.nav_minuman) {
+            MinumanFragment minumanFragment = new MinumanFragment();
+            android.support.v4.app.FragmentTransaction fragmentTransaction =
+                    getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.content, minumanFragment);
+            fragmentTransaction.commit();
+            getSupportActionBar().setTitle("Menu Minuman");
             Toast.makeText(getApplicationContext(),"Fragment Minuman",Toast.LENGTH_LONG).show();
         } else if (id == R.id.nav_pesanan) {
             Toast.makeText(getApplicationContext(),"Fragment Pesanan",Toast.LENGTH_LONG).show();
