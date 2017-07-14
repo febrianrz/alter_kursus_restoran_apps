@@ -114,7 +114,7 @@ public class MainActivity extends AppCompatActivity
             fragmentTransaction.replace(R.id.content, minumanFragment);
             fragmentTransaction.commit();
             getSupportActionBar().setTitle("Menu Minuman");
-            Toast.makeText(getApplicationContext(),"Fragment Minuman",Toast.LENGTH_LONG).show();
+
         } else if (id == R.id.nav_pesanan) {
             PesananFragment pesananFragment = new PesananFragment();
             android.support.v4.app.FragmentTransaction fragmentTransaction =

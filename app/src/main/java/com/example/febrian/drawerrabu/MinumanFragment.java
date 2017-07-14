@@ -15,7 +15,9 @@ import android.widget.ListView;
  */
 public class MinumanFragment extends Fragment {
 
-    private String[] minumanArray = {"Es Teh manis","Juz Jeruk","Jus Mangga","Jus Alpukat"};
+    private String[] minumanArray = {
+            "Es Teh manis","Juz Jeruk","Jus Mangga","Jus Alpukat"
+    };
 
     /** minuman fragment menggunakan listview **/
 
@@ -28,13 +30,12 @@ public class MinumanFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View rootView = inflater.inflate(R.layout.fragment_minuman, container, false);
-
+        View rootView = inflater.inflate(R.layout.fragment_minuman, container,
+                false);
         ArrayAdapter adapter = new ArrayAdapter<String>(this.getContext(),
                 R.layout.list_minuman_item, minumanArray);
         ListView listView = (ListView) rootView.findViewById(R.id.minuman_list);
         listView.setAdapter(adapter);
-
         return rootView;
     }
 
